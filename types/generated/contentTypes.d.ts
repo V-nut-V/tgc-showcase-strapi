@@ -424,6 +424,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<'Product Name'>;
     publishedAt: Schema.Attribute.DateTime;
+    rank: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     SKU: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
