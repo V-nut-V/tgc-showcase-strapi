@@ -404,12 +404,6 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Image: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     Image_URL: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -441,12 +435,6 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Video: Schema.Attribute.Media<'files' | 'videos' | 'images' | 'audios'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     Video_URL: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
